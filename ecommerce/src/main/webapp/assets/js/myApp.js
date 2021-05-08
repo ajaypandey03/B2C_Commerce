@@ -1,4 +1,5 @@
 $(function() {
+	
 	//highlighting nav menu
 	switch(menu) {
 	
@@ -8,11 +9,12 @@ $(function() {
 	case 'Contact Us':
 		$('#contact').addClass('active');
 		break;
-	case 'Products':
-		$('#products').addClass('active');
+	case 'All Products':
+		$('#listProducts').addClass('active');
 		break;
 	default:
-		$('#home').addClass('active');
+		$('#listProducts').addClass('active');
+		$('#a_' + id).addClass('active');
 		break;
 	}
 });

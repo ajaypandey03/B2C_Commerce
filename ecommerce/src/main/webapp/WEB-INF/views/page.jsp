@@ -19,6 +19,7 @@
 <title>B2C_Commerce - ${title}</title>
 <script>
 	window.menu = '${title}';
+	window.id = '${category.id}';
 </script>
 <!-- Favicon-->
 <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
@@ -48,6 +49,13 @@
 			<c:if test="${userClickContact == true }">
 				<%@include file="contact.jsp"%>
 			</c:if>
+			
+			<!-- Page Content Product-->
+			<c:if test="${userClickAllProducts == true or userClickCategoryProducts == true}">
+				<%@include file="listProducts.jsp"%>
+			</c:if>
+			
+		
 		</div>
 
 		<!-- Footer-->
